@@ -31,7 +31,8 @@ export default async function myPage() {
     <main className="content-grid">
       <div className="flex flex-col items-center justify-center mb-32">
         <div className="h-[15vh] flex flex-col items-end justify-end">
-          <LogoAJ forceClass="logo" width={310} height={210} />
+          {/* <LogoAJ forceClass="logo" width={310} height={210} /> */}
+          Gov Jobs
         </div>
         {/* Job Search Form */}
         <div className="w-full md:w-3/6 h-[6vh] flex flex-col items-top mt-[-1rem]">
@@ -308,8 +309,6 @@ export default async function myPage() {
               globally. Connect with your next career move in the academic
               sector through our comprehensive online job board. Find your next
               academic job now!
-              
-              
             </p>
           </div>
         </div>
