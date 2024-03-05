@@ -6,12 +6,12 @@ import ContactUsForm from '@/components/forms/ContactUsForm';
 export const metadata: Metadata = {
   title: 'Contact Us', //Option 1 replaces the %s in layout.tsx
   // title: {
-  //   absolute: '  Academic Jobs: Academic, research and science positions locally and globally.', //Option 2 overrides the title in layout.tsx
+  //   absolute: '  Gov Jobs: Gov, research and science positions locally and globally.', //Option 2 overrides the title in layout.tsx
   // },
   description:
-    'Contact our knowledgeable team today for assistance and information on our number 1 academic job board site in higher education and academia. ',
+    'Contact our knowledgeable team today for assistance and information on our number 1 Gov job board site in higher education and academia. ',
   keywords:
-    'Contact Us Academicjobs, Contact Academic Jobs, Academicjobs Contact',
+    'Contact Us Govjobs, Contact Gov Jobs, Govjobs Contact',
 };
 export default function myPage() {
   return (
@@ -21,10 +21,10 @@ export default function myPage() {
           <h1 className="mt-8">Let’s Get Together!</h1>
           <h2 className="mt-4">
             Tell us what you need, and we will be straight back to you. At
-            Academic Jobs we make it easy for you!
+            Gov Jobs we make it easy for you!
           </h2>
           <h4 className="mt-4 mb-0">
-            <span className="font-bold">Fun Fact: </span> AcademicJobs.com is
+            <span className="font-bold">Fun Fact: </span> GovJobs.com is
             the go-to job board in higher education, experiencing rapid growth
             with a larger audience and more job opportunities than any other.
             Join the success story that even has our mothers beaming with pride!
@@ -75,7 +75,7 @@ export default function myPage() {
                   ></path>
                 </svg>
               </div>
-              <div className="stat-title">Academic Positions Filled</div>
+              <div className="stat-title">Gov Positions Filled</div>
               <div className="stat-value text-pink-500">8.6K</div>
               <div className="stat-desc">
                 Provided Job Seekers with more opportunities than any other Job
@@ -112,12 +112,12 @@ export default function myPage() {
                 width={800}
                 height={534}
                 src="/ai-jop-posting/ai-job-listing-automation.jpg"
-                alt="Let us help you find your next crazy SMART academic employee"
+                alt="Let us help you find your next crazy SMART Gov employee"
               />
             </figure>
             <div className="card-body">
               <h2 className="card-title">
-                Let us help you find your next crazy SMART academic employee!
+                Let us help you find your next crazy SMART Gov employee!
               </h2>
               <p>
                 Post a job now and see how easy it is, we do all the heavy
@@ -142,7 +142,7 @@ export default function myPage() {
             <div className="card-body">
               <h2 className="card-title">Find your Dream Job Today!</h2>
               <p>
-                Are you looking for your dream role? Then search all academic
+                Are you looking for your dream role? Then search all Gov
                 jobs now.
               </p>
               <div className="card-actions justify-end">

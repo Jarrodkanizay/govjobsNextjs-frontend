@@ -7,7 +7,7 @@ type Props = {
   forceClass?: string;
 };
 
-const Logo = ({ width = 32, height = 32, dimensions, forceClass }: Props) => (
+const Logo = ({ width = 62, height = 62, dimensions, forceClass }: Props) => (
   <Image
     src="/gov-jobs-logo.jpg"
     alt=""

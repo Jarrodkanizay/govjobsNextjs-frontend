@@ -14,7 +14,7 @@ const Footer = () => {
                   {/* <li><a className="footer-nav__link" href="/">Home</a></li> */}
                   <li><Link href="/">Home</Link></li>
                                    
-                  <li><Link href="/contact/">Contact Us</Link></li>
+                  <li><Link href="/contact-us/">Contact Us</Link></li>
                   <li><Link href="/terms-of-use/">Terms & Conditions</Link></li>
 
               </ul>
@@ -26,7 +26,7 @@ const Footer = () => {
                   <li><Link href="/jobs/">Find Jobs</Link></li>
                  
                   <li><Link href="/employers/">Find Employers</Link></li>
-                  <li><Link href="/school-career-advice/">Career Advice</Link></li>  
+                  {/* <li><Link href="/school-career-advice/">Career Advice</Link></li>   */}
                  
                  
               </ul>
@@ -37,9 +37,9 @@ const Footer = () => {
                   <li className='text-white font-bold text-xl pb-1 '>Employer</li>
               
                   <li ><Link href="/about/">About Us</Link></li>
-                  <li  ><a target="_blank"  className="footer-nav__link" href="https://postmyjob.online/school-pricing/">Post a Job</a></li>
+                  {/* <li  ><a target="_blank"  className="footer-nav__link" href="https://postmyjob.online/school-pricing/">Post a Job</a></li> */}
                                        
-                                       <li  ><Link target="_blank"  href="/whygovjobs/">Why GovJobs?</Link></li>
+                                       {/* <li  ><Link target="_blank"  href="/whygovjobs/">Why GovJobs?</Link></li> */}
                                       
                  
               </ul>
@@ -51,7 +51,7 @@ const Footer = () => {
                   {/* <li><a href="https://academicjobs.com/career-advice">Career Advice</a></li> */}
                   <li><a target="_blank"  className="footer-nav__link" href="https://www.facebook.com/GovJobscomau-100981372144522"  rel="noopener">Facebook</a></li>
                
-                  <li><a  target="_blank"  className="footer-nav__link" href="https://www.instagram.com/" rel="noopener">Instagram</a></li>
+                  {/* <li><a  target="_blank"  className="footer-nav__link" href="https://www.instagram.com/" rel="noopener">Instagram</a></li> */}
                   <li><a target="_blank"  href="https://www.linkedin.com/company/teachingjobs">Linkedin</a></li>
               </ul>
           </div>

@@ -29,9 +29,9 @@ export default async function myPage() {
 
   return (
     <main className="content-grid">
-      <div className="flex flex-col items-center justify-center mb-32">
-        <div className="h-[15vh] flex flex-col items-end justify-end">
-          <Logo forceClass="logo" width={310} height={62} />
+      <div className="flex flex-col items-center justify-center mb-16">
+        <div className="h-[15vh] flex flex-col items-end justify-end w-30">
+          <Logo forceClass="logo w-30" width={510} height={262}  />
         </div>
         {/* Job Search Form */}
         <div className="w-full md:w-3/6 h-[6vh] flex flex-col items-top mt-[-1rem]">
@@ -42,7 +42,7 @@ export default async function myPage() {
       <JobCategoryAndLocationLinks />
    
 
-      <div id="section" className="bg-slate-200 full-width py-12 mb-16 mt-12">
+      <div id="section" className="bg-slate-200 full-width py-12 mb-16 mt-32">
         <div className="md:hero-content flex flex-col lg:flex-row mx-auto md:items-start py-12">
           <h1 className="text-2xl font-normal sm:text-right text-gray-400 m-0 pb-8  md:px-0">
             <span className="md:text-6xl font-bold text-gray-500 pb-4 ">
@@ -54,14 +54,14 @@ export default async function myPage() {
             <p className="md:px-7 mt-16 text-gray-600 text-lg">
             Tell us what you want as a employee and we will deliver it straight to you.
             </p>
-            <p className="md:px-7">
+            {/* <p className="md:px-7">
               Whether you&apos;re an aspiring or established professor,
               researcher, lecturer, or higher education administrator, our
               platform offers the most current opportunities in academia
               globally. Connect with your next career move in the academic
               sector through our comprehensive online job board. Find your next
               academic job now!
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

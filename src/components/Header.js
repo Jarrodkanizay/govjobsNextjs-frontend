@@ -119,7 +119,7 @@ export default function Header() {
           )}
 
           <NavItem
-            url={`/${countryMappings2[region.toLowerCase()].url}/jobs`}
+            url={`/jobs`}
             icon="/dotted-arrow.svg"
             navLink="Find Jobs"
             forceClass="border-b hover:border-[#bd2125]" //this is optional
@@ -127,27 +127,25 @@ export default function Header() {
             onClick={() => setIsNavOpen(false)}
           />
           <NavItem
-            url={`/${
-              countryMappings2[region.toLowerCase()].url
-            }/jobs-by-top-universities`}
+            url={`/employers`}
             icon="/upward-arrow.svg"
             navLink="Find Employers"
             forceButtonClass="border-b hover:border-[#bd2125] "
             onClick={() => setIsNavOpen(false)}
           />
-          <NavItem
+          {/* <NavItem
             url="/career-help"
             icon="/network-icon.svg"
             navLink="Career Advice"
             forceButtonClass="border-b hover:border-[#bd2125] "
             onClick={() => setIsNavOpen(false)}
-          />
+          /> */}
           <div
             className={`hide-mobile p-2  md:w-52  dropdown-content z-[1] menu px-4 py-2   rounded-box w-31 } `}
             style={{ maxWidth: '62px' }}
             onMouseLeave={onMouseLeave}
           >
-            <div
+            {/* <div
               className="  text-gray-900 relative"
               onMouseEnter={onMouseEnter}
             >
@@ -184,7 +182,7 @@ export default function Header() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
             {/* </div> */}
             {/* </div> */}
           </div>

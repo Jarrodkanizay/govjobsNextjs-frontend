@@ -1,175 +1,48 @@
-// import React, { useState, useEffect, useRef } from 'react'
-import Image from 'next/image';
 import Link from 'next/link';
-import HeroBanner from '@/components/HeroBanner';
-import USA from '@/components/topUnis/USA';
-import Australia from '@/components/topUnis/Australia';
-import Africa from '@/components/topUnis/Africa';
-import Asia from '@/components/topUnis/Asia';
-import Canada from '@/components/topUnis/Canada';
-import UK from '@/components/topUnis/UK';
-import SA from '@/components/topUnis/SA';
-import NZ from '@/components/topUnis/NZ';
-import ME from '@/components/topUnis/ME';
-import India from '@/components/topUnis/India';
-import Europe from '@/components/topUnis/Europe';
 
-export const metadata = {
-  // title: 'About', //Option 1 replaces the %s in layout.tsx
-  title: {
-    absolute: 'The Best Universities to work for Globally', //Option 2 overrides the title in layout.tsx
-  },
-  description:
-    'Explore top universities globally, including Australia, Canada, UK, USA, and beyond, to make an informed choice for your studies.',
-  keywords: 'Find Universities. Find employers, Find institutions',
-};
+const companies = [
+  { name: 'Blackall Tambo Regional Council', logo: 'https://govjobs.com.au/files/pictures/blacktambo1.jpg', jobs: 1, link: 'https://govjobs.com.au/company/78/blackall-tambo-regional-council/' },
+  { name: 'City of Boroondara', logo: 'https://govjobs.com.au/files/pictures/boroondora.jpg', jobs: 1, link: 'https://govjobs.com.au/company/83/city-of-boroondara/' },
+  
+  { name: 'Dundas Shire Council', logo: 'https://govjobs.com.au/files/pictures/Shire-of-Dundas-Logo-HighRes.jpg', jobs: 1, link: 'https://govjobs.com.au/company/170/dundas-shire-council/' },
+  { name: 'East Pilbara Shire Council', logo: 'https://govjobs.com.au/files/pictures/Eastpilb1.jpg', jobs: 7, link: 'https://govjobs.com.au/company/172/east-pilbara-shire-council/' },
+  { name: 'Kalgoorlie-Boulder City Council', logo: 'https://govjobs.com.au/files/pictures/kalgo1_1.png', jobs: 1, link: 'https://govjobs.com.au/company/213/kalgoorlie-boulder-city-council/' },
+  { name: 'NSW Government', logo: 'https://govjobs.com.au/files/pictures/3220c7927ac6482659ec014ef63372e0.jpg', jobs: 31, link: 'https://govjobs.com.au/company/506/nsw-government/' },
+  { name: 'Queensland Government', logo: 'https://govjobs.com.au/files/pictures/054c8a2b4f31151871023a976d0417dc.jpg', jobs: 57, link: 'https://govjobs.com.au/company/483/queensland-government/' },
+  { name: 'Shire of Broome', logo: 'https://govjobs.com.au/files/pictures/broome1.jpg', jobs: 3, link: 'https://govjobs.com.au/company/92/shire-of-broome/' },
+  { name: 'Talent Propeller Pty Limited', logo: 'https://govjobs.com.au/files/pictures/TP_Logo_Primary.png', jobs: 13, link: 'https://govjobs.com.au/company/12/talent-propeller-pty-limited/' },
+  { name: 'Victoria State Government', logo: 'https://govjobs.com.au/files/pictures/b878448acb73d7b1264dabdfd6a06dce.png', jobs: 56, link: 'https://govjobs.com.au/company/484/victoria-state-government/' },
+  { name: 'Victoria State Government - Education and Training', logo: 'https://govjobs.com.au/files/pictures/9b3e0a127f00903437fb0f730dd0bae4.png', jobs: 1, link: 'https://govjobs.com.au/company/488/victoria-state-government-education-and-training/' },
+  { name: 'Whittlesea City Council', logo: 'https://govjobs.com.au/files/pictures/witthlesea1.jpg', jobs: 1, link: 'https://govjobs.com.au/company/377/whittlesea-city-council/' },
+  { name: 'Dardanup Shire Council', logo: 'https://govjobs.com.au/files/pictures/dardanup6.jpg', jobs: 1, link: 'https://govjobs.com.au/company/145/dardanup-shire-council/' },
+];
 
-export default function myPage() {
+const CompanyCard = ({ name, logo, jobs, link }) => (
+  <div className="featured-company" aria-hidden="false">
+    <Link href={link}>
+     
+        <div className="panel panel-default featured-company__panel border rounded-3xl mb-8 p-4">
+          <div className="panel-body featured-company__panel-body text-left items-center">
+            {logo ? <img src={logo} alt={name} className="featured-company__image" /> : <div className="company__no-image"></div>}
+          </div>
+          <div className="panel-footer featured-company__panel-footer">
+            <div className="featured-companies__name">
+              <span>{name}</span>
+            </div>
+            <div className="featured-companies__jobs">{jobs} job(s)</div>
+          </div>
+        </div>
+    
+    </Link>
+  </div>
+);
+
+export default function Home() {
   return (
-    <main className=" mx-auto">
-      {/* Hero banner */}
-      <HeroBanner
-        bgColorClass="bg-slate-200"
-        h1="Find the best universities and colleges to work for here..."
-        h2="Use university rankings to search for jobs in higher education."
-        para1="Search for higher ed career opportunities by university rankings worldwide on the number 1 academic job board. Discover academic positions at the world's top universities with current openings through our 'Top Universities' page."
-        src="/employers/top-universities-world-wide.jpg"
-        alt="People immersed in academic blogs at our vibrant Academic Hub"
-        btnPrimaryText="Join our Talent Pool"
-        btnPrimaryURL="/talent-pool"
-        reorder={false}
-        imgRight={false}
-      />
-
-      <div className="content-grid">
-        <div className="max-w-[650px] mx-auto">
-          <h4 className="underline-full">Explore universities by region</h4>
-          <p>
-            Discover top university jobs through our detailed employer rankings,
-            selecting your ideal academic career at prestigious institutions.
-            Learn about employers' missions, visions, values, histories,
-            achievements, and cultures to find your perfect match.
-          </p>
-        </div>
-        <ul className="md:flex flex-wrap gap-8 my-12 justify-center items-center max-w-[980px] mx-auto">
-          <li className="region">
-            <a href="#section" className="scroll-smooth md:scroll-auto ">
-              United States <span className="flag">🇺🇸</span>
-            </a>
-          </li>
-          <li className="region">
-            <a href="#section1" className="scroll-smooth md:scroll-auto">
-              Australia <span className="flag">🇦🇺</span>
-            </a>
-          </li>
-          <li className="region">
-            <a href="#section2" className="scroll-smooth md:scroll-auto">
-              United Kingdom <span className="flag">🇬🇧</span>
-            </a>
-          </li>
-          <li className="region">
-            <a href="#section3" className="scroll-smooth md:scroll-auto">
-              Asia <span className="flag">🐉</span>
-            </a>
-          </li>
-          <li className="region">
-            <a href="#section3" className="scroll-smooth md:scroll-auto">
-              Canada <span className="flag">🇨🇦</span>
-            </a>
-          </li>
-          <li className="region">
-            <a href="#section4" className="scroll-smooth md:scroll-auto">
-              Europe <span className="flag">🇪🇺</span>
-            </a>
-          </li>
-          <li className="region">
-            <a href="#section5" className="scroll-smooth md:scroll-auto">
-              South America <span className="flag">🏔️</span>
-            </a>
-          </li>
-          <li className="region">
-            <a href="#section6" className="scroll-smooth md:scroll-auto">
-              New Zealand <span className="flag">🇳🇿</span>
-            </a>
-          </li>
-          <li className="region">
-            <a href="#section7" className="scroll-smooth md:scroll-auto">
-              Middle East <span className="flag">🐪</span>
-            </a>
-          </li>
-          <li className="region">
-            <a href="#section8" className="scroll-smooth md:scroll-auto">
-              India <span className="flag">🇮🇳</span>
-            </a>
-          </li>
-          <li className="region">
-            <a href="#section9" className="scroll-smooth md:scroll-auto">
-              Africa <span className="flag">🐘</span>
-            </a>
-          </li>
-        </ul>
-
-        <USA id="section" heading="UNITED STATES" />
-
-        <h2 id="section1" className="-full">
-        AUSTRALIA
-          </h2>
-        <Australia id="section1" heading="" />
-
-        <h2 id="section9" className="-full">
-        AFRICA
-          </h2>
-        <Africa id="section9"heading="" />
-
-        <h2 id="section3" className="-full">
-        ASIA
-          </h2>
-        <Asia id="section3" heading="" />
-
-        <h2 id="section3" className="-full">
-        CANADA
-          </h2>
-        <Canada id="section3" heading="" />
-
-        <h2 id="section2" className="-full">
-        UNITED KINGDOM
-          </h2>
-        <UK id="section2" heading="" />
-
-        <h2 id="section5" className="-full">
-        SOUTH AMERICA
-          </h2>
-        <SA id="section5" heading="" />
- 
-        
-        <div>
-          <h2 id="section6" className="-full">
-            NEW ZEALAND
-          </h2>
-          <NZ heading="" />
-        </div>
-
-        <div>
-          <h2 id="section7" className="-full">
-            MIDDLE EAST
-          </h2>
-          <ME heading="" />
-        </div>
-
-        <div>
-          <h2 id="section8" className="-full">
-            INDIA
-          </h2>
-          <India heading="" />
-        </div>
-       
-        <div>
-          <h2 id="section4" className="-full">
-            EUROPE
-          </h2>
-          <Europe heading="" />
-        </div>
-      </div>
-    </main>
+    <div className="search-results search-results__companies featured-companies text-center clearfix columns-3 max-w-screen-lg mx-auto mt-8">
+      {companies.map((company, index) => (
+        <CompanyCard key={index} {...company} />
+      ))}
+    </div>
   );
 }
