@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import LogoAJ from '@/components/brand/LogoAJ';
+import Logo from '@/components/brand/Logo';
 import NavItem from '@/components/NavItem';
 import DispatchLink from '@/components/DispatchLink';
 import { useStore } from '@/lib/store/store';
@@ -83,12 +83,15 @@ export default function Header() {
               className={`static-logo mobile`}
               onClick={() => setIsNavOpen(false)}
             >
-              <LogoAJ width={270} height={60} />{' '}
+              <Logo width={310} height={62} />{' '}
             </Link>
           )
         ) : (
-          <Link href={`/${countryMappings2[region.toLowerCase()].url}`} className={`static-logo mobile`}>
-            <LogoAJ width={270} height={60} />{' '}
+          <Link
+            href={`/${countryMappings2[region.toLowerCase()].url}`}
+            className={`static-logo mobile`}
+          >
+            <Logo width={310} height={62} />{' '}
           </Link>
         )}
         <HamburgerMenuIcon
@@ -107,8 +110,11 @@ export default function Header() {
       <header className={`header ${isNavOpen ? 'show-menu shadow-xl' : ''} `}>
         <nav>
           {pathname === '/' ? null : (
-            <Link href={`/${countryMappings2[region.toLowerCase()].url}`} className="hide-mobile static-logo mr-4">
-              <LogoAJ width={270} height={60} />{' '}
+            <Link
+              href={`/${countryMappings2[region.toLowerCase()].url}`}
+              className="hide-mobile static-logo mr-4"
+            >
+              <Logo width={310} height={62} />{' '}
             </Link>
           )}
 
@@ -121,7 +127,9 @@ export default function Header() {
             onClick={() => setIsNavOpen(false)}
           />
           <NavItem
-            url={`/${countryMappings2[region.toLowerCase()].url}/jobs-by-top-universities`}
+            url={`/${
+              countryMappings2[region.toLowerCase()].url
+            }/jobs-by-top-universities`}
             icon="/upward-arrow.svg"
             navLink="Top Universities"
             forceButtonClass="border-b hover:border-amber-500 "
