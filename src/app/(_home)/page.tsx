@@ -31,7 +31,7 @@ export default async function myPage() {
     <main className="content-grid">
       <div className="flex flex-col items-center justify-center mb-16">
         <div className="h-[15vh] flex flex-col items-end justify-end w-30">
-          <Logo forceClass="logo w-30" width={510} height={262}  />
+          <Logo forceClass="logo w-30 mb-6" width={510} height={262} />
         </div>
         {/* Job Search Form */}
         <div className="w-full md:w-3/6 h-[6vh] flex flex-col items-top mt-[-1rem]">
@@ -40,7 +40,6 @@ export default async function myPage() {
       </div>
 
       <JobCategoryAndLocationLinks />
-   
 
       <div id="section" className="bg-slate-200 full-width py-12 mb-16 mt-32">
         <div className="md:hero-content flex flex-col lg:flex-row mx-auto md:items-start py-12">
@@ -48,11 +47,13 @@ export default async function myPage() {
             <span className="md:text-6xl font-bold text-gray-500 pb-4 ">
               GOVJOBS: <br />
             </span>{' '}
-            Australia's New Government Jobs Website          </h1>
+            Australia's New Government Jobs Website
+          </h1>
 
           <div>
             <p className="md:px-7 mt-16 text-gray-600 text-lg">
-            Tell us what you want as a employee and we will deliver it straight to you.
+              Tell us what you want as a employee and we will deliver it
+              straight to you.
             </p>
             {/* <p className="md:px-7">
               Whether you&apos;re an aspiring or established professor,
@@ -66,9 +67,6 @@ export default async function myPage() {
         </div>
       </div>
 
-     
-
-   
       {/* <h2 className="underline-full mt-6">Top Teaching Jobs Today</h2>
       <div className="cate-group section23 ">
     <div className="widget__text-block">
@@ -457,10 +455,6 @@ export default async function myPage() {
             </div>
           </div>
         </div> */}
-
- 
-
-    
 
       {/* <div className="card-actions flex mt-4 mx-auto">
         <Link href="/academic-talent-pool" className="btn btn-aj">
