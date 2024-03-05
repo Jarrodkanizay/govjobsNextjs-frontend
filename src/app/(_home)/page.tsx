@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import LogoAJ from '@/components/brand/LogoAJ';
+import Logo from '@/components/brand/Logo';
 import type { Metadata } from 'next';
 import JobSearchBoxHome from '@/components/JobSearchBoxHome';
 import JobCategoryAndLocationLinks from '@/components/links/JobCategoryAndLocationLinks';
@@ -30,17 +30,8 @@ export default async function myPage() {
   return (
     <main className="content-grid">
       <div className="flex flex-col items-center justify-center mb-32">
-        <div className="h-[15vh] flex flex-col items-end justify-end mb-8">
-        <Link
-              href={`/`}>
-              <Image
-              width={300}
-              height={170}
-                className="w-30"
-                src="/govjobslogo.jpg"
-                alt=""
-              />
-            </Link>
+        <div className="h-[15vh] flex flex-col items-end justify-end">
+          <Logo forceClass="logo" width={310} height={62} />
         </div>
         {/* Job Search Form */}
         <div className="w-full md:w-3/6 h-[6vh] flex flex-col items-top mt-[-1rem]">
@@ -63,9 +54,14 @@ export default async function myPage() {
             <p className="md:px-7 mt-16 text-gray-600 text-lg">
             Tell us what you want as a employee and we will deliver it straight to you.
             </p>
-            {/* <p className="md:px-7 text-[#334680] font-bold">
-            Kindergarten Jobs | Primary School Jobs | Secondary School Jobs
-            </p> */}
+            <p className="md:px-7">
+              Whether you&apos;re an aspiring or established professor,
+              researcher, lecturer, or higher education administrator, our
+              platform offers the most current opportunities in academia
+              globally. Connect with your next career move in the academic
+              sector through our comprehensive online job board. Find your next
+              academic job now!
+            </p>
           </div>
         </div>
       </div>

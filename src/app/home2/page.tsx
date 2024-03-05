@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import LogoAJ from '@/components/brand/LogoAJ';
+import Logo from '@/components/brand/Logo';
 import type { Metadata } from 'next';
 import JobSearchBoxHome from '@/components/JobSearchBoxHome';
 import JobCategoryAndLocationLinks from '@/components/links/JobCategoryAndLocationLinks';
@@ -33,7 +33,7 @@ export default async function myPage() {
       <main className="content-grid debug">
         <div className="flex flex-col items-center justify-center mb-32">
           <div className="h-[15vh] flex flex-col items-end justify-end">
-            <LogoAJ forceClass="logo" width={310} height={210} />
+            <Logo forceClass="logo" width={310} height={210} />
           </div>
           {/* Job Search Form */}
           <div className="w-full md:w-3/6 h-[6vh] flex flex-col items-top mt-[-1rem]">
