@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const JobLocationTypeLinks = () => {
   return (
-    <ul className=" faculty-container flex gap-4 items-center justify-center text-[#f4a10c] mx-2 mt-7 flex-wrap">
+    <ul className=" faculty-container flex gap-4 items-center justify-center text-[#bd2125] mx-2 mt-7 flex-wrap">
       <li className="hover:underline whitespace-nowrap">
         <Link href="/online/">Online{'  '}</Link>
       </li>

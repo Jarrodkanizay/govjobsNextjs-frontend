@@ -53,7 +53,7 @@ export default function JobSearchBox() {
           ref={keyWordRef}
         />
         <button
-          className="px-4 py-2 bg-[#f4a10c] text-white md:rounded-md rounded-b-lg hover:bg-orange-600 animate-pulse font-bold shadow-md"
+          className="px-4 py-2 bg-[#bd2125] text-white md:rounded-md rounded-b-lg hover:bg-orange-600 animate-pulse font-bold shadow-md"
           type="submit"
         >
           Search In Your Country

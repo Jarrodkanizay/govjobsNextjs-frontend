@@ -59,7 +59,7 @@ export default function Page() {
       </div>
 
       <div className=" mt-2 ">
-        <ul className="faculty-container flex  gap-4 items-center justify-center text-amber-500 ">
+        <ul className="faculty-container flex  gap-4 items-center justify-center text-[#bd2125] ">
           <li>
             <Link href="/online/"> Online </Link>
           </li>

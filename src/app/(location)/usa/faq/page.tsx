@@ -19,7 +19,7 @@ import FAQ from '@/components/FAQ';
 
   
 
-      <h1 className="text-3xl font-bold text-[#f4a10c]">Academic Jobs USA FAQ</h1>
+      <h1 className="text-3xl font-bold text-[#bd2125]">Academic Jobs USA FAQ</h1>
      
      
          

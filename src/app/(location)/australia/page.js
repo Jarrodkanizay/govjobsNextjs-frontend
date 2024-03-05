@@ -30,7 +30,7 @@ export default function Page() {
           width={330}
           height={220}
         />
-        {/* <h2 className="underline-full text-5xl text-amber-500">
+        {/* <h2 className="underline-full text-5xl text-[#bd2125]">
         Australia's University Job Board
         </h2> */}
       </div>
@@ -82,7 +82,7 @@ export default function Page() {
         </ul>
       </div>
       <div className=" mt-4 ">
-        <ul className=" flex flex-wrap gap-4 items-center justify-center text-[#f4a10c] ">
+        <ul className=" flex flex-wrap gap-4 items-center justify-center text-[#bd2125] ">
           <li>
             <Link href="/online"> Online </Link>
           </li>
@@ -113,7 +113,7 @@ export default function Page() {
         View Your Ranking Here
       </div> */}
       <AusUniLogos />
-      {/* <div className="text-[#f4a10c]  flex flex-col items-center justify-center  text-2xl pt-8  animate-bounce h-6 ">
+      {/* <div className="text-[#bd2125]  flex flex-col items-center justify-center  text-2xl pt-8  animate-bounce h-6 ">
         <a href="#section" class="scroll-smooth md:scroll-auto">
           ▼
         </a>
@@ -148,7 +148,7 @@ export default function Page() {
           </div>
 
           <p className="font-semibold"></p>
-          <ul className="flex flex-wrap text-justify space-between gap-6 px-7 pb-4  text-[#f4a10c] mx-auto">
+          <ul className="flex flex-wrap text-justify space-between gap-6 px-7 pb-4  text-[#bd2125] mx-auto">
             <li>
               <Link href="/melbourne"> Melboune </Link>
             </li>
