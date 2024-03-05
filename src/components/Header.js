@@ -189,15 +189,15 @@ export default function Header() {
 
           {isNavOpen && (
             <>
-              <a
+              {/* <a
                 className="btn btn-aj w-full mt-4"
                 // onClick={handleFormSubmit}
                 href="/jobs"
               >
                 Search Globally
               </a>
-              <details class="w-full text-center bg-gray-300 open:bg-[amber-200] duration-300 rounded-3xl font-bold shadow-xl">
-                <summary class="py-2">Search In Your Country</summary>
+              <details class="w-full text-center bg-gray-300 open:bg-[amber-200] duration-300 rounded-3xl font-bold shadow-xl"> */}
+                {/* <summary class="py-2">Search In Your Country</summary>
                 <a
                   className={`md:w-52  dropdown-content z-[1] menu p-2  bg-slate-100  w-31 } `}
                 >
@@ -219,15 +219,13 @@ export default function Header() {
                     </ul>
                   </div>
                 </a>
-              </details>
+              </details> */}
             </>
           )}
 
           <div className="ml-auto post-a-job-button z-[-1] md:z-[1]">
             <NavItem
-              url={`/${
-                countryMappings2[region.toLowerCase()].url
-              }/recruitment/`}
+              url={`/post-a-job/`}
               icon="/post-a-job-icon.svg"
               navLink="Post a Job"
               forceLinkClass="ml-auto"
