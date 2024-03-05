@@ -10,8 +10,7 @@ export const metadata: Metadata = {
   // },
   description:
     'Contact our knowledgeable team today for assistance and information on our number 1 Gov job board site in higher education and academia. ',
-  keywords:
-    'Contact Us Govjobs, Contact Gov Jobs, Govjobs Contact',
+  keywords: 'Contact Us Govjobs, Contact Gov Jobs, Govjobs Contact',
 };
 export default function myPage() {
   return (
@@ -20,14 +19,14 @@ export default function myPage() {
         <div className="prose">
           <h1 className="mt-8">Let’s Get Together!</h1>
           <h2 className="mt-4">
-            Tell us what you need, and we will be straight back to you. At
-            Gov Jobs we make it easy for you!
+            Tell us what you need, and we will be straight back to you. At Gov
+            Jobs we make it easy for you!
           </h2>
           <h4 className="mt-4 mb-0">
-            <span className="font-bold">Fun Fact: </span> GovJobs.com is
-            the go-to job board in higher education, experiencing rapid growth
-            with a larger audience and more job opportunities than any other.
-            Join the success story that even has our mothers beaming with pride!
+            <span className="font-bold">Fun Fact: </span> GovJobs.com.au is the
+            go-to job board in higher education, experiencing rapid growth with
+            a larger audience and more job opportunities than any other. Join
+            the success story that even has our mothers beaming with pride!
           </h4>
         </div>
 
@@ -142,8 +141,8 @@ export default function myPage() {
             <div className="card-body">
               <h2 className="card-title">Find your Dream Job Today!</h2>
               <p>
-                Are you looking for your dream role? Then search all Gov
-                jobs now.
+                Are you looking for your dream role? Then search all Gov jobs
+                now.
               </p>
               <div className="card-actions justify-end">
                 <Link href="/jobs" className="btn btn-info">

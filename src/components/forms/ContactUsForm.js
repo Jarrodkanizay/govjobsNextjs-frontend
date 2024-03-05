@@ -19,7 +19,7 @@ const ContactUsForm = ({ maxWidth }) => {
     setError,
   } = useForm({
     defaultValues: {
-      '00_Form_Name': 'Contact Us Form Submission',
+      '00_Form_Name': 'GovJobs: Contact Us Form Submission',
     },
   });
 
@@ -175,7 +175,7 @@ const ContactUsForm = ({ maxWidth }) => {
           </select>
         </div>
 
-        {/* Academic Details Section */}
+        {/* Government Details Details Section */}
         <h2 className="underline-full mt-10 mb-6">
           What would you Like to Say
         </h2>
