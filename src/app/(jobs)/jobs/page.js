@@ -284,9 +284,9 @@ export default function Page() {
       </div>
       <section class="jobs_grid job_post_search_container">
         <div class="filters_panel">
-          {/* <div class="filters_content">
+          <div class="filters_content">
             <JobFilter />
-          </div> */}
+          </div>
         </div>
         <div class="listings_panel">
           <div class="listings_content">

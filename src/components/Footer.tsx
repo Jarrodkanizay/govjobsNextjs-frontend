@@ -52,7 +52,7 @@ const Footer = () => {
                   <li><a target="_blank"  className="footer-nav__link" href="https://www.facebook.com/GovJobscomau-100981372144522"  rel="noopener">Facebook</a></li>
                
                   {/* <li><a  target="_blank"  className="footer-nav__link" href="https://www.instagram.com/" rel="noopener">Instagram</a></li> */}
-                  <li><a target="_blank"  href="https://www.linkedin.com/company/teachingjobs">Linkedin</a></li>
+                  {/* <li><a target="_blank"  href="https://www.linkedin.com/company/teachingjobs">Linkedin</a></li> */}
               </ul>
           </div>
           
