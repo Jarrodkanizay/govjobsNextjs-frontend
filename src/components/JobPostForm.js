@@ -13,30 +13,28 @@ import { Input } from '@/components/ui/input';
 import Speedo from '@/components/icons/Speedo';
 
 const stripeLink = {
-  JobElephant: 'https://buy.stripe.com/6oE3dSddS3Mc6Ry3ce',
+  // JobElephant: 'https://buy.stripe.com/6oE3dSddS3Mc6Ry3ce',
   Australia: 'https://buy.stripe.com/dR6eWA6PuaaA7VC6ov',
-  Asia: 'https://buy.stripe.com/4gw8ycc9ObeE2Bi6ot?region=asia',
-  Africa: 'https://buy.stripe.com/4gw8ycc9ObeE2Bi6ot?region=africa',
-  Canada: 'https://buy.stripe.com/4gw8ycc9ObeE2Bi6ot?region=canada',
-  Europe: 'https://buy.stripe.com/4gw8ycc9ObeE2Bi6ot?region=europe',
-  India: 'https://buy.stripe.com/4gw8ycc9ObeE2Bi6ot?region=india',
-  'South America':
-    'https://buy.stripe.com/4gw8ycc9ObeE2Bi6ot?region=south-america',
-  'Middle East': 'https://buy.stripe.com/4gw8ycc9ObeE2Bi6ot?region=middle-east',
-  'New Zealand': 'https://buy.stripe.com/4gw8ycc9ObeE2Bi6ot?region=new-zealand',
-  'United Kingdom':
-    'https://buy.stripe.com/4gw8ycc9ObeE2Bi6ot?region=united-kingdom',
-  USA: 'https://buy.stripe.com/4gw8ycc9ObeE2Bi6ot?region=usa',
+  // Asia: 'https://buy.stripe.com/4gw8ycc9ObeE2Bi6ot?region=asia',
+  // Africa: 'https://buy.stripe.com/4gw8ycc9ObeE2Bi6ot?region=africa',
+  // Canada: 'https://buy.stripe.com/4gw8ycc9ObeE2Bi6ot?region=canada',
+  // Europe: 'https://buy.stripe.com/4gw8ycc9ObeE2Bi6ot?region=europe',
+  // India: 'https://buy.stripe.com/4gw8ycc9ObeE2Bi6ot?region=india',
+  // 'South America':
+  //   'https://buy.stripe.com/4gw8ycc9ObeE2Bi6ot?region=south-america',
+  // 'Middle East': 'https://buy.stripe.com/4gw8ycc9ObeE2Bi6ot?region=middle-east',
+  // 'New Zealand': 'https://buy.stripe.com/4gw8ycc9ObeE2Bi6ot?region=new-zealand',
+  // 'United Kingdom':
+  //   'https://buy.stripe.com/4gw8ycc9ObeE2Bi6ot?region=united-kingdom',
+  // USA: 'https://buy.stripe.com/4gw8ycc9ObeE2Bi6ot?region=usa',
 };
-const JobPostForm = ({ partner, region = 'USA' }) => {
-  const [regionSelected, setRegion] = useState(region);
 
+const JobPostForm = ({ partner, region = 'Australia' }) => {
+  const [regionSelected, setRegion] = useState(region);
   const [standardMode, setStandardMode] = useState(true);
   const [newContact, setNewContact] = useState(false);
   const [selectedContact, setSelectedContact] = useState(null);
-  const [selectedCurrency, setSelectedCurrency] = useState(
-    'Which Region are you from?'
-  );
+  const [selectedCurrency, setSelectedCurrency] = useState({ regionSelected });
   const [paymentMethod, setPaymentMethod] = useState('creditCard');
   const [paymentMessage, setPaymentMessage] = useState('Credit Card');
 
@@ -58,28 +56,27 @@ const JobPostForm = ({ partner, region = 'USA' }) => {
 
   let avatarPath = '';
   let textColor = 'text-aj';
-  let partnerName = 'AcademicJobs';
+  let partnerName = 'GovJobs';
   let partnerLogo = '';
   let partnerImage = '/partners/post-a-job.jpg';
   let partnerPullDown = false;
-  let institutionName = `Institution Name (ie: Harvard University)`;
-  let urlExample = `uni-name.edu/job-posting-url`;
+  let institutionName = `Government Department`;
+  let urlExample = `vicroads.vic.gov.au/job-posting-url`;
 
-  if (partner === 'JobElephant') {
-    partnerPullDown = true;
-    partnerName = partner;
-    institutionName = `${partnerName} (ie: Utah University)`;
-    textColor = 'text-emerald-600';
-    partnerLogo =
-      'https://academicjobs.s3.amazonaws.com/img/_misc/proudly-working-with.png';
-    partnerImage =
-      'https://academicjobs.s3.amazonaws.com/img/_misc/jobelephant-puzzle.png';
-    avatarPath = '/partners/jobelephant/avatars/';
-    urlExample = `apptrkr.com/...`;
-  }
+  // if (partner === 'JobElephant') {
+  //   partnerPullDown = true;
+  //   partnerName = partner;
+  //   institutionName = `${partnerName} (ie: Utah University)`;
+  //   textColor = 'text-emerald-600';
+  //   partnerLogo =
+  //     'https://academicjobs.s3.amazonaws.com/img/_misc/proudly-working-with.png';
+  //   partnerImage =
+  //     'https://academicjobs.s3.amazonaws.com/img/_misc/jobelephant-puzzle.png';
+  //   avatarPath = '/partners/jobelephant/avatars/';
+  //   urlExample = `apptrkr.com/...`;
+  // }
   useEffect(() => {
-    //alert(partnerName)
-    if (partnerName === '' || partnerName === 'AcademicJobs') {
+    if (partnerName === '' || partnerName === 'GovJobs') {
       setStandardMode(true);
     } else {
       setStandardMode(false);
@@ -234,7 +231,7 @@ const JobPostForm = ({ partner, region = 'USA' }) => {
                       <>
                         <label
                           htmlFor="currency"
-                          className="label-text text-xs"
+                          className="label-text text-xs hidden"
                         >
                           Region
                         </label>
@@ -246,10 +243,11 @@ const JobPostForm = ({ partner, region = 'USA' }) => {
                           name="currency"
                           className="select select-bordered w-full bg-white focus:outline-none focus:border-orange-500"
                           required
+                          hidden
                         >
-                          <option value="" selected>
-                            Which Region are you from?
-                          </option>
+                          {/* <option value={regionSelected} selected>
+                            {regionSelected}
+                          </option> */}
 
                           {Object.keys(stripeLink)
                             .filter((key) => key !== 'JobElephant')
@@ -408,13 +406,13 @@ const JobPostForm = ({ partner, region = 'USA' }) => {
               height={800}
               src={partnerImage}
               className=""
-              alt="AcademicJobs and JobElephant Partnership"
+              alt="GovJobs and JobElephant Partnership"
             />
             <div className="prose">
               <p className="mt-4">
                 The average time to Post a Job and fill out a form on the major
-                Job Seeking platforms is 9 min or more. With AcademicJobs we
-                make your life easier and save you time by…
+                Job Seeking platforms is 9 min or more. With GovJobs we make
+                your life easier and save you time by…
               </p>
               <ul>
                 <li>
