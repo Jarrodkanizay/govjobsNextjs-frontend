@@ -38,7 +38,7 @@ const Footer = () => {
         <div>
           <ul>
             <li className="text-white font-bold text-xl pb-1 ">
-              Schools & Recruiters
+              Employers & Recruiters
             </li>
             <li>
               <Link href="/post-a-job">Post a Job</Link>
