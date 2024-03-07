@@ -1,8 +1,7 @@
 export const industryTypes = [
   'Recruiter',
   'Employer',
-  'Institution (College, University, etc.)',
-  'Academic',
+  'Institution (Local Government, etc.)',
   'Student',
   'Parent',
   'Other',
