@@ -20,7 +20,7 @@ export default function myPage() {
         <div className="">
           <div className="hero-content flex-col lg:flex-row gap-8 ">
             <Image
-              src="/about-us/harvard-university-main.jpg"
+              src="/about-us/parliament-house-at-dusk-canberra-act.jpg"
               width={1280}
               height={380}
               className="lg:max-w-lg rounded-lg shadow-2xl mb-8 lg:mb-0"

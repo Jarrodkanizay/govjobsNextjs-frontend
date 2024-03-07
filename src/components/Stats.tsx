@@ -10,7 +10,7 @@ const Stats = () => {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              className="inline-block w-8 h-8 stroke-current"
+              className="inline-block size-10 min-w-10 stroke-current"
             >
               <path
                 strokeLinecap="round"
@@ -34,7 +34,7 @@ const Stats = () => {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              className="inline-block w-8 h-8"
+              className="inline-block size-10 min-w-10"
             >
               <path
                 strokeLinecap="round"
