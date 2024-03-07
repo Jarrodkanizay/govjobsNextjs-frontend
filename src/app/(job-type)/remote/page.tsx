@@ -7,11 +7,11 @@ import JobFilter from '@/components/JobFilter';
 export const metadata: Metadata = {
   // title: 'About', //Option 1 replaces the %s in layout.tsx
   title: {
-    absolute: '  Academic Remote Jobs', //Option 2 overrides the title in layout.tsx
+    absolute: '  Government Remote Jobs', //Option 2 overrides the title in layout.tsx
   },
   description:
-    'If you are looking for academic jobs online, you can browse through our job board to find the latest opportunities in this flexible and rewarding field.   ',
-  keywords: 'Academic Jobs Online. online positions',
+    'If you are looking for Government jobs online, you can browse through our job board to find the latest opportunities in this flexible and rewarding field.   ',
+  keywords: 'Government Jobs Online. online positions',
 };
 export default function myPage() {
   return (
@@ -19,12 +19,12 @@ export default function myPage() {
       <div className="bg-slate-200 full-width">
         <div className="hero-content flex-col lg:flex-row mx-auto items-start py-12">
           <h1 className="md:text-6xl font-bold m-0 md:text-right text-gray-500 pb-4">
-            Academic Remote Jobs
+            Government Remote Jobs
           </h1>
 
           <div className="">
             <p className="px-7 mb-4 mt-1">
-              Seek all remote uni jobs through Australia’s No.1 job board.
+              Seek all remote gov jobs through Australia’s No.1 job board.
               Discover flexibility to align your professional pursuits with your
               lifestyle choices. Find the ideal remote job transcending
               geographical boundaries. Join us in embracing a future where your
@@ -36,12 +36,7 @@ export default function myPage() {
               remote job platform, unleashing boundless possibilities wherever
               you choose your path to be.
             </p>
-            <Link
-              href={'/academic-talent-pool'}
-              className="btn btn-aj btn-sm w-2/3 md:w-1/4 mx-auto my-2"
-            >
-              Join Our Talent Pool
-            </Link>
+           
           </div>
         </div>
       </div>

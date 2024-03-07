@@ -111,10 +111,10 @@ export default function Header() {
         <nav>
           {pathname === '/' ? null : (
             <Link
-              href={`/${countryMappings2[region.toLowerCase()].url}`}
+              href={`/`}
               className="hide-mobile static-logo mr-4"
             >
-              <Logo width={310} height={62} />{' '}
+              <Logo width={210} height={62} />{' '}
             </Link>
           )}
 
