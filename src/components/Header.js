@@ -133,7 +133,7 @@ export default function Header() {
           <NavItem
             url="/career-help"
             icon="/network-icon.svg"
-            navLink="Career Advice"
+            navLink="Career Help"
             forceButtonClass="border-b hover:border-[#bd2125] "
             onClick={() => setIsNavOpen(false)}
           />
