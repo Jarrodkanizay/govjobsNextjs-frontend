@@ -466,11 +466,11 @@ const nextConfig = {
         destination: 'https://www.academicjobs.com/global/jobs-by-top-universities',
         permanent: true,
         },
-        {
-        source: '/career-help',
-        destination: 'https://www.academicjobs.com/career-help',
-        permanent: true,
-        },
+        // {
+        // source: '/career-help',
+        // destination: 'https://www.academicjobs.com/career-help',
+        // permanent: true,
+        // },
         {
         source: '/recruitment',
         destination: 'https://www.academicjobs.com/recruitment',
