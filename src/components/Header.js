@@ -110,10 +110,7 @@ export default function Header() {
       <header className={`header ${isNavOpen ? 'show-menu shadow-xl' : ''} `}>
         <nav>
           {pathname === '/' ? null : (
-            <Link
-              href={`/`}
-              className="hide-mobile static-logo mr-4"
-            >
+            <Link href={`/`} className="hide-mobile static-logo mr-4">
               <Logo width={210} height={62} />{' '}
             </Link>
           )}
@@ -133,13 +130,13 @@ export default function Header() {
             forceButtonClass="border-b hover:border-[#bd2125] "
             onClick={() => setIsNavOpen(false)}
           />
-          {/* <NavItem
+          <NavItem
             url="/career-help"
             icon="/network-icon.svg"
             navLink="Career Advice"
             forceButtonClass="border-b hover:border-[#bd2125] "
             onClick={() => setIsNavOpen(false)}
-          /> */}
+          />
           <div
             className={`hide-mobile p-2  md:w-52  dropdown-content z-[1] menu px-4 py-2   rounded-box w-31 } `}
             style={{ maxWidth: '62px' }}
@@ -197,7 +194,7 @@ export default function Header() {
                 Search Globally
               </a>
               <details class="w-full text-center bg-gray-300 open:bg-[amber-200] duration-300 rounded-3xl font-bold shadow-xl"> */}
-                {/* <summary class="py-2">Search In Your Country</summary>
+              {/* <summary class="py-2">Search In Your Country</summary>
                 <a
                   className={`md:w-52  dropdown-content z-[1] menu p-2  bg-slate-100  w-31 } `}
                 >
