@@ -7,7 +7,7 @@ import { countryMappings, countryMappings1 } from '@/lib/data/data';
 export default function JobSearchBox() {
   const keyWordRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
-  let region = 'Australia';
+  let region = '';
   const { setRegion, setSearchJobCriteria } = useStore();
   const handleFormSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -15,30 +15,10 @@ export default function JobSearchBox() {
     if (keyWordRef.current && keyWordRef.current.value.trim()) {
       a.q = keyWordRef.current.value.trim();
     }
-    if (region !== 'Global') {
-      const location = (countryMappings1 as any)[region]?.searchLocation || '';
-      const params = new URLSearchParams({
-        l: encodeURIComponent(location),
-        q: encodeURIComponent(a.q || ''),
-      });
-      router.push(`/jobs?${params.toString()}`);
-    } else {
-      try {
-        const response = await fetch(
-          'https://api.geoapify.com/v1/ipinfo?apiKey=ea0e191c22a94bf39e0e58ffbe2d6b66'
-        );
-        const result = await response.json();
-        const country = result.country.name;
-        setRegion((countryMappings1 as any)[country.toLowerCase()]);
-        const qValue = a.q || '';
-        const lValue = (countryMappings1 as any)[
-          (countryMappings as any)[country.toLowerCase()]
-        ]?.searchLocation;
-        router.push(`/jobs?q=${qValue}&l=${lValue}`);
-      } catch (error) {
-        console.log('Error:', error);
-      }
-    }
+    const qValue = a.q || '';
+    router.push(`/jobs?q=${qValue}`);
+
+ 
   };
   return (
     <form
