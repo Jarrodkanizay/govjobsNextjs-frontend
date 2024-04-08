@@ -50,21 +50,21 @@ const nextConfig = {
       //   destination: '/jobs',
       //   permanent: true,
       // },
-      // {
-      //   source: '/global',
-      //   destination: '/',
-      //   permanent: true,
-      // },
+      {
+        source: '/global',
+        destination: '/',
+        permanent: true,
+      },
       // {
       //   source: '/academic-hub',
       //   destination: '/career-help',
       //   permanent: true,
       // },
-      // {
-      //   source: '/talent-pool',
-      //   destination: '/academic-talent-pool',
-      //   permanent: true,
-      // },
+      {
+        source: '/talent-pool',
+        destination: '/',
+        permanent: true,
+      },
       // {
       //   source: '/jobs/general-manager-jobs',
       //   destination: '/hr-jobs/generalist-hr',

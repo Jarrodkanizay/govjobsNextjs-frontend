@@ -52,7 +52,7 @@ export default function BlogPosts({
         h1="Empowering Your Academic Career: Networking, Collaboration, and Expert Advice"
         para1="Your ultimate academic career awaits, let us supercharge your academic journey. In today's fast-paced academic world, advancing your career goes beyond just landing the next job; it's about building meaningful connections, engaging in collaborative projects, and gaining insights that pave the way for success."
         para2="Whether you're embarking on your PhD journey, navigating the postdoctoral landscape, or shaping the minds of the future as a professor, our curated career advice, tips, and insights from seasoned academics and researchers are designed to guide you every step of the way."
-        src="/blogs/career-assistance-networking-and-collaboration.jpg"
+        src="/blogs/4.jpeg"
         alt="People immersed in academic blogs at our vibrant Academic Hub"
         btnPrimaryText="Join our Talent Pool"
         btnPrimaryURL="/talent-pool"
