@@ -50,21 +50,21 @@ const nextConfig = {
       //   destination: '/jobs',
       //   permanent: true,
       // },
-      // {
-      //   source: '/global',
-      //   destination: '/',
-      //   permanent: true,
-      // },
+      {
+        source: '/global',
+        destination: '/',
+        permanent: true,
+      },
       // {
       //   source: '/academic-hub',
       //   destination: '/career-help',
       //   permanent: true,
       // },
-      // {
-      //   source: '/talent-pool',
-      //   destination: '/academic-talent-pool',
-      //   permanent: true,
-      // },
+      {
+        source: '/talent-pool',
+        destination: '/',
+        permanent: true,
+      },
       // {
       //   source: '/jobs/general-manager-jobs',
       //   destination: '/hr-jobs/generalist-hr',
@@ -4190,6 +4190,26 @@ const nextConfig = {
         source: '/city/sacramento-usa-education-hub',
         destination:
           'https://www.academicjobs.com/city/sacramento-usa-education-hub',
+        permanent: true,
+      },
+      {
+        source: '/employers/:slug*',
+        destination: 'https://www.academicjobs.com/employers/:slug*',
+        permanent: true,
+      },
+      {
+        source: '/company/:slug*',
+        destination: 'https://www.academicjobs.com/employers',
+        permanent: true,
+      },
+      {
+        source: '/cities/:slug*',
+        destination: 'https://www.academicjobs.com/cities/:slug*',
+        permanent: true,
+      },
+      {
+        source: '/blog',
+        destination: 'https://www.academicjobs.com/career-help',
         permanent: true,
       },
     ];
