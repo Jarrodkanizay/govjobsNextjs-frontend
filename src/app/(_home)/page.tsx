@@ -39,7 +39,7 @@ export default async function myPage() {
         </div>
       </div>
 
-      <JobCategoryAndLocationLinks />
+      {/* <JobCategoryAndLocationLinks /> */}
 
       <div className="md:block hidden bg-slate-200 full-width py-12 mb-16 mt-32 ">
         <div className="md:hero-content flex flex-col lg:flex-row mx-auto md:items-start py-12">
