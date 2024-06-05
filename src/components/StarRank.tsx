@@ -7,7 +7,7 @@ type StarRankProps = {
 };
 
 export const StarRank = ({
-  ranking = 2,
+  ranking = 4,
   onColor = 'gold',
   offColor = 'lightgray',
   size = 26,

@@ -52,10 +52,10 @@ export default async function myPage() {
 
           <div>
             <p className="md:px-7  text-gray-600 text-lg">
-            Discover top-tier roles in the public sector. Begin your search for government jobs, 
-            civil service positions, and administrative opportunities. Explore and apply for a range of roles, 
-            including policy advisor, public administrator, government analyst, and senior government positions, 
-            available nationally.
+              Discover top-tier roles in the public sector. Begin your search for government jobs,
+              civil service positions, and administrative opportunities. Explore and apply for a range of roles,
+              including policy advisor, public administrator, government analyst, and senior government positions,
+              available nationally.
             </p>
           </div>
         </div>
